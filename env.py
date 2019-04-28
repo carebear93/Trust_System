@@ -5,6 +5,9 @@ class Env(nx.DiGraph):
         self.add_nodes_from(graph)
         self.add_edges_from(graph.edges)
 
+    def __str__(self):
+        return
+
     def tick(self):
         num_succ=0
         for n in self.nodes:
@@ -12,5 +15,6 @@ class Env(nx.DiGraph):
             succ=p.execute()
             if succ:
                 num_succ+=1
+                num_r=True
             n.learn(p,succ)
-        return num_succ
+        return [num_succ, num_r]
