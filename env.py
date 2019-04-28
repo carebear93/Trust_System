@@ -15,6 +15,5 @@ class Env(nx.DiGraph):
             succ=p.execute()
             if succ:
                 num_succ+=1
-                num_r=True
             n.learn(p,succ)
-        return [num_succ, num_r]
+        return num_succ

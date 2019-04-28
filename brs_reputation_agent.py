@@ -5,6 +5,7 @@ from simple_reputation_agent import SimpleReputationAgent
 """
 Task 1 - Assessment 3
 Beta Reputation System
+Kristian Care
 """
 class BRSReputationAgent(SimpleReputationAgent):
 
